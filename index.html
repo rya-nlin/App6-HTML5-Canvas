@@ -64,13 +64,16 @@ function drawRect(){
 function drawName(){
 	ctx.font = "30px Arial";
 	ctx.fillText("Ryan Lin", 50, 50);
+	//writes in text my name, ryan lin on the canvas
 }
 const img = new Image();
 img.src = "https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5d0c2ab246786ca1d5e_86.png";
-
+//create img constant to hold the image that will be drawn in the canvas
 function drawPic(){
 	ctx.drawImage(img, 75,75);
+	//draws the image onto the canvas
 }
+	
 </script>
 
 
@@ -97,7 +100,7 @@ function drawPic(){
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
+	<h1>App 6 - HTML Canvas</h1>
 </div>
 	
 <div id="content" class="w3-container">
@@ -107,11 +110,11 @@ function drawPic(){
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </div>
-<div> 
-	<canvas id = "myCanvas" width="200" height="200"> <!-- creating the canvas-->
-		
-	</canvas>
-</div>
+<canvas id = "myCanvas" width="200" height="200"> <!-- creating the canvas-->
+</canvas>
+<a onclick = "drawRect();" class = "w3-btn w3-black">Draw a Rectrangle</a> <!-- button calls drawrect function and draws a function on the canvas-->
+<a onclick = "drawName();" class = "w3-btn w3-black">Draw my Name</a> <!-- button calls the drawname function, drawing "ryan lin" on the canvas-->
+<a onclick = "drawPic();" class = w3-btn w3-black">Draw a Picture</a> <!-- button calls the drawpic function, drawing a predetermined image on the canvas-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
