@@ -113,7 +113,14 @@ window.drawName = function(){
 }
 
 window.drawPic = function(){
-	ctx.drawImage(img, 75,75);
+  if (img.complete) {
+    ctx.drawImage(img, 75, 75);
+  } else {
+    img.onload = function() {
+      ctx.drawImage(img, 75, 75);
+    }
+  }
+}
 	//draws the image onto the canvas
 }
 </script>
