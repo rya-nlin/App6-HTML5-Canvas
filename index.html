@@ -38,9 +38,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-const img = new Image();
-img.src = "https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5d0c2ab246786ca1d5e_86.png";
-//create img constant to hold the image that will be drawn in the canvas
+
 
 	
 </script>
@@ -111,7 +109,9 @@ window.drawName = function(){
 	ctx.fillText("Ryan Lin", 50, 50);
 	//writes in text my name, ryan lin on the canvas
 }
-
+const img = new Image();
+img.src = "https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5d0c2ab246786ca1d5e_86.png";
+//create img constant to hold the image that will be drawn in the canvas
 window.drawPic = function(){
   if (img.complete) {
     ctx.drawImage(img, 75, 75);
@@ -122,7 +122,7 @@ window.drawPic = function(){
   }
 }
 	//draws the image onto the canvas
-}
+
 </script>
 <a onclick = "drawRect();" class = "w3-btn w3-black">Draw a Rectrangle</a> <!-- button calls drawrect function and draws a function on the canvas-->
 <a onclick = "drawName();" class = "w3-btn w3-black">Draw my Name</a> <!-- button calls the drawname function, drawing "ryan lin" on the canvas-->
