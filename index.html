@@ -77,21 +77,12 @@ console.log("This file last modified " + docMod); // generates message in javaSc
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </div>
-<canvas id = "myCanvas" width="200" height="200"> <!-- creating the canvas-->
+<canvas id = "myCanvas" width="200" height="200" style="border:1px solid grey"> <!-- creating the canvas-->
 </canvas>
 <script>
 var c = document.getElementById("myCanvas"); //retreives canvas from html and assigns to variable c
 var ctx = c.getContext("2d"); //gets context of the canvas as 2d
-ctx.moveTo(0,0);
-ctx.lineTo(0, 200);
-ctx.stroke();
-ctx.lineTo(200,200);
-ctx.stroke();
-ctx.lineTo(200,0);
-ctx.stroke();
-ctx.lineTo(0,0);
-ctx.stroke();
-//drawing the border of the canvas
+
 window.drawRect = function(){
 	ctx.moveTo(25,25);
 	ctx.lineTo(175, 25);
