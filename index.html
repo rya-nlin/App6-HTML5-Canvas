@@ -110,23 +110,24 @@ window.drawName = function(){
 	//writes in text my name, ryan lin on the canvas
 }
 const img = new Image();
-img.src = "https://m.media-amazon.com/images/I/715vwvP5ZEL.png";
+img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwtcSb3O2bbBBu9qe0vZX6amz2JuNQ-2_zOg&s";
 //create img constant to hold the image that will be drawn in the canvas
 window.drawPic = function(){
-  if (img.complete) {
-    ctx.drawImage(img, 75, 75);
-  } else {
-    img.onload = function() {
       ctx.drawImage(img, 75, 75);
     }
-  }
-}
-	//draws the image onto the canvas
+  
 
+	//draws the image onto the canvas
+window.clearCanvas = function(){
+	ctx.clearRect(0,0,200,200);
+}
 </script>
-<a onclick = "drawRect();" class = "w3-btn w3-black">Draw a Rectrangle</a> <!-- button calls drawrect function and draws a function on the canvas-->
-<a onclick = "drawName();" class = "w3-btn w3-black">Draw my Name</a> <!-- button calls the drawname function, drawing "ryan lin" on the canvas-->
-<a onclick = "drawPic();" class = "w3-btn w3-black">Draw a Picture</a> <!-- button calls the drawpic function, drawing a predetermined image on the canvas-->
+<div class = "w3-container">
+	<a onclick = "drawRect();" class = "w3-btn w3-black">Draw a Rectrangle</a> <!-- button calls drawrect function and draws a function on the canvas-->
+	<a onclick = "drawName();" class = "w3-btn w3-black">Draw my Name</a> <!-- button calls the drawname function, drawing "ryan lin" on the canvas-->
+	<a onclick = "drawPic();" class = "w3-btn w3-black">Draw a Picture</a> <!-- button calls the drawpic function, drawing a predetermined image on the canvas-->
+	<a onclick = "clearCanvas();" class = "w3-btn w3-black">Clear Canvas</a> <!--button calls clear canvas function to erase everything-->
+</div>
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
